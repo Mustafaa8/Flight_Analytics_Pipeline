@@ -3,15 +3,16 @@ import requests
 import os 
 import logging
 from dotenv import load_dotenv
-import datetime as dt
-import pickle
+import progressbar
+import time
+from prefect import task
 
 logging.basicConfig(level=logging.INFO,format="%(asctime)s - %(message)s")
 load_dotenv()
 
 path = os.environ.get("DATA_PATH")
-openweather_key = os.environ.get("OPENWEATHER_API_KEY")
 
+@task
 def flight_data_get():
    """
    function to download and get the airport and routes data
@@ -38,9 +39,86 @@ def flight_data_get():
    except Exception as e:
       logging.error("An error has occured while extracting data")
       raise
-    
-def weather_for_airport():
-   pass
 
+
+def map_weather_code(code):
+   if code == 0:
+      return "Clear Sky"
+   elif code in [1,2,3]:
+      return "Mainly Clear"
+   elif code in [45,48]:
+      return "Fog",
+   elif code in [51, 53, 55]:
+      return "Drizzle"
+   elif code in [56,57]:
+      return "Freezing Drizzle",
+   elif code in [61, 63, 65]:
+      return "Rain"
+   elif code in [66, 67]:
+      return "Freezing Rain",
+   elif code in [71, 73, 75]:
+      return "Snow Fall"
+   elif code in [45,48]:
+      return "Fog ",
+   elif code == 77:
+      return "Snow Grains"
+   elif code in [80, 81, 82]:
+      return "Rain Showers"
+   elif code in [85, 86]:
+      return "Snow Showers"
+   elif code == 95:
+      return "Thunderstorms"
+   elif code in [96,99]:
+      return "Heavy Thunderstorm"
+   else:
+      return "Unknown"
+
+def weather_for_airport(lat,lon):
+   params = {
+      "latitude":lat,
+      "longitude":lon,
+      "current": ["temperature_2m", "wind_speed_10m", "precipitation", "weather_code"],
+	   "timezone": "auto",
+	   "forecast_days": 1
+   }
+   url = "https://api.open-meteo.com/v1/forecast"
+   res = requests.get(url,params=params).json()
+
+   weather_data = {
+      "latitude":lat,
+      "longitude":lon,
+      "temperature":res['current']['temperature_2m'],
+      "wind_speed":res['current']['wind_speed_10m'],
+      "precipitation":res['current']['precipitation'],
+      "timezone":res['timezone_abbreviation'],
+      "weather_state":map_weather_code(res['current']['weather_code'])
+   }
+   time.sleep(1.1)
+   return weather_data
+
+@task
 def weather_data_get():
-   pass
+   logging.info("Getting Weather Data...")
+   df = pd.read_csv(f"{path}/airports.csv")
+   df = df[(df['iata'].notna()) & (df['latitude'].notna()) & (df['longitude'].notna())]
+   airports_weather_data = []
+   bar = progressbar.ProgressBar(widgets=
+                                 [
+        'Weather Data Collection: ', progressbar.Percentage(),
+        ' ', progressbar.Bar(marker=progressbar.RotatingMarker()),
+        ' ', progressbar.Counter(),
+        ' ', progressbar.Timer(),
+    ]
+    ,maxval=df.shape[0]).start()
+   for index,row in df.iterrows():
+      airport_weather = weather_for_airport(row['latitude'],row['longitude'])
+      airport_weather['iata'] = row['iata']
+      airport_weather['city'] = row['city']
+      airports_weather_data.append(airport_weather)
+      bar.update(index + 1)
+   bar.finish()
+   weather_data = pd.DataFrame(airport_weather)
+   print(weather_data.head())
+   weather_data.to_csv("weather.csv",sep=",")
+
+weather_data_get()
