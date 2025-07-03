@@ -1,4 +1,6 @@
-prefect
+dagster 
+dagit
 pandas
 sqlalchemy
 psycopg2-binary
+progressbar
