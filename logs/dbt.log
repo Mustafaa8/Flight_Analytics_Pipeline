@@ -1,0 +1,110 @@
+[0m20:59:11.170893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70b3268618e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70b326e04cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70b3267b59d0>]}
+
+
+============================== 20:59:11.181934 | a673bca8-d581-4dc2-a8d6-782adc64a208 ==============================
+[0m20:59:11.181934 [info ] [MainThread]: Running with dbt=1.10.3
+[0m20:59:11.183452 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/mostafa/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt init skylytics_dbt', 'send_anonymous_usage_stats': 'True'}
+[0m20:59:11.213625 [debug] [MainThread]: Starter project path: /home/mostafa/data/flight_analytics_pipeline/flight_env/lib/python3.12/site-packages/dbt/include/starter_project
+[0m20:59:11.226825 [info ] [MainThread]: 
+Your new dbt project "skylytics_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:59:11.227872 [info ] [MainThread]: Setting up your profile.
+[0m20:59:37.015160 [info ] [MainThread]: Profile skylytics_dbt written to /home/mostafa/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m20:59:37.016440 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 26.037188, "process_in_blocks": "0", "process_kernel_time": 0.440044, "process_mem_max_rss": "104560", "process_out_blocks": "80", "process_user_time": 2.066844}
+[0m20:59:37.016931 [debug] [MainThread]: Command `dbt init` succeeded at 20:59:37.016802 after 26.04 seconds
+[0m20:59:37.017292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70b3268618e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70b3266a1610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70b32673a510>]}
+[0m20:59:37.017841 [debug] [MainThread]: Flushing usage events
+[0m20:59:38.026049 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:59:49.317771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7697dedd6ae0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7697df14bce0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7697dedd6f30>]}
+
+
+============================== 20:59:49.320889 | 1d4cc49b-9f98-45b0-8b7d-6ecf37a74b1f ==============================
+[0m20:59:49.320889 [info ] [MainThread]: Running with dbt=1.10.3
+[0m20:59:49.321557 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/mostafa/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:59:49.372109 [info ] [MainThread]: dbt version: 1.10.3
+[0m20:59:49.372595 [info ] [MainThread]: python version: 3.12.3
+[0m20:59:49.372996 [info ] [MainThread]: python path: /home/mostafa/data/flight_analytics_pipeline/flight_env/bin/python3
+[0m20:59:49.373364 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m20:59:49.439563 [info ] [MainThread]: Using profiles dir at /home/mostafa/.dbt
+[0m20:59:49.440021 [info ] [MainThread]: Using profiles.yml file at /home/mostafa/.dbt/profiles.yml
+[0m20:59:49.440389 [info ] [MainThread]: Using dbt_project.yml file at /home/mostafa/data/flight_analytics_pipeline/dbt_project.yml
+[0m20:59:49.440764 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m20:59:49.441633 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.19091564, "process_in_blocks": "56", "process_kernel_time": 0.244472, "process_mem_max_rss": "105052", "process_out_blocks": "16", "process_user_time": 1.658922}
+[0m20:59:49.442099 [debug] [MainThread]: Command `dbt debug` failed at 20:59:49.441965 after 0.19 seconds
+[0m20:59:49.442492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7697dec1fec0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7697dee929c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7697de8d62a0>]}
+[0m20:59:49.442899 [debug] [MainThread]: Flushing usage events
+[0m20:59:50.527813 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:00:46.579728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70877fcd7020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708780012450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70877faf51f0>]}
+
+
+============================== 21:00:46.582788 | 72a77996-af6d-4a8a-b3e7-86935f5d0150 ==============================
+[0m21:00:46.582788 [info ] [MainThread]: Running with dbt=1.10.3
+[0m21:00:46.583403 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/mostafa/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:00:46.592462 [info ] [MainThread]: dbt version: 1.10.3
+[0m21:00:46.593113 [info ] [MainThread]: python version: 3.12.3
+[0m21:00:46.593561 [info ] [MainThread]: python path: /home/mostafa/data/flight_analytics_pipeline/flight_env/bin/python3
+[0m21:00:46.593986 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m21:00:46.657275 [info ] [MainThread]: Using profiles dir at /home/mostafa/.dbt
+[0m21:00:46.658027 [info ] [MainThread]: Using profiles.yml file at /home/mostafa/.dbt/profiles.yml
+[0m21:00:46.658729 [info ] [MainThread]: Using dbt_project.yml file at /home/mostafa/data/flight_analytics_pipeline/dbt_project.yml
+[0m21:00:46.681009 [info ] [MainThread]: adapter type: postgres
+[0m21:00:46.681560 [info ] [MainThread]: adapter version: 1.9.0
+[0m21:00:46.682102 [info ] [MainThread]: Configuration:
+[0m21:00:46.682493 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:00:46.682832 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m21:00:46.683166 [info ] [MainThread]: Required dependencies:
+[0m21:00:46.683520 [debug] [MainThread]: Executing "git --help"
+[0m21:00:46.706845 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:00:46.707316 [debug] [MainThread]: STDERR: "b''"
+[0m21:00:46.707657 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:00:46.708058 [info ] [MainThread]: Connection:
+[0m21:00:46.708457 [info ] [MainThread]:   host: localhost
+[0m21:00:46.708820 [info ] [MainThread]:   port: 5432
+[0m21:00:46.709206 [info ] [MainThread]:   user: admin
+[0m21:00:46.709568 [info ] [MainThread]:   database: skylytics
+[0m21:00:46.709938 [info ] [MainThread]:   schema: public
+[0m21:00:46.710433 [info ] [MainThread]:   connect_timeout: 10
+[0m21:00:46.710971 [info ] [MainThread]:   role: None
+[0m21:00:46.711431 [info ] [MainThread]:   search_path: None
+[0m21:00:46.711808 [info ] [MainThread]:   keepalives_idle: 0
+[0m21:00:46.712232 [info ] [MainThread]:   sslmode: None
+[0m21:00:46.712708 [info ] [MainThread]:   sslcert: None
+[0m21:00:46.713139 [info ] [MainThread]:   sslkey: None
+[0m21:00:46.713638 [info ] [MainThread]:   sslrootcert: None
+[0m21:00:46.714272 [info ] [MainThread]:   application_name: dbt
+[0m21:00:46.715331 [info ] [MainThread]:   retries: 1
+[0m21:00:46.716120 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m21:00:46.940070 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m21:00:47.122300 [debug] [MainThread]: Using postgres connection "debug"
+[0m21:00:47.122699 [debug] [MainThread]: On debug: select 1 as id
+[0m21:00:47.123015 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:00:51.408303 [debug] [MainThread]: SQL status: SELECT 1 in 1.596 seconds
+[0m21:00:51.411411 [debug] [MainThread]: On debug: Close
+[0m21:00:51.412726 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:00:51.414072 [info ] [MainThread]: [31m1 check failed:[0m
+[0m21:00:51.415694 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/mostafa/data/flight_analytics_pipeline/dbt_project.yml> not found
+
+[0m21:00:51.419015 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 2.219767, "process_in_blocks": "5600", "process_kernel_time": 0.322861, "process_mem_max_rss": "112700", "process_out_blocks": "24", "process_user_time": 1.795141}
+[0m21:00:51.420430 [debug] [MainThread]: Command `dbt debug` failed at 21:00:51.420178 after 2.22 seconds
+[0m21:00:51.421248 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:00:51.422045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70877f6d6000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70877faf51f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70877eca2180>]}
+[0m21:00:51.423197 [debug] [MainThread]: Flushing usage events
+[0m21:00:52.208671 [debug] [MainThread]: An error was encountered while trying to flush usage events
