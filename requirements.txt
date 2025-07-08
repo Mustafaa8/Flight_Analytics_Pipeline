@@ -1,6 +1,7 @@
-dagster 
-dagit
 pandas
+prefect
 sqlalchemy
 psycopg2-binary
+dbt-core
+dbt-postgres
 progressbar
