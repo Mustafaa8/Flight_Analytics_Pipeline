@@ -1,5 +1,6 @@
 pandas
 prefect
+prefect[shell]
 sqlalchemy
 psycopg2-binary
 dbt-core
