@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_airports
+    description: "Cleaned airport dimension data"
+    columns:
+      - name: iata
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_weather
+    description: "Airport weather data for analytics"
+    columns:
+      - name: airport_iata
+        tests:
+          - not_null
+
+  - name: stg_routes
+    description: "Flight routes between airports"
+    columns:
+      - name: source_airport
+        tests:
+          - not_null

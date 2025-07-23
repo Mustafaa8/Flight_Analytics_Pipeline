@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: flight_data
+    database: skylytics
+    schema: public
+    tables:
+      - name: airports
+      - name: routes
+      - name: weather

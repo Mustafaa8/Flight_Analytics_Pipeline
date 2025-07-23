@@ -1,0 +1,28 @@
+version: 2
+
+
+
+
+models:
+  - name: mart_weather_summary
+    description: "Avg temperature and wind per airport"
+    columns:
+      - name: airport_iata
+        tests:
+          - not_null
+
+  - name: mart_top_routes
+    description: "Top 50 busiest airport routes"
+  - name: mart_country_weather_summary
+    description: "Average weather statistics grouped by country"
+    columns:
+      - name: country
+        tests:
+          - not_null
+
+  - name: mart_weather_code_summary
+    description: "Weather condition code breakdown across observations"
+    columns:
+      - name: weather_code
+        tests:
+          - not_null
