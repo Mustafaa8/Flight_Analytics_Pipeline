@@ -58,7 +58,7 @@ skylytics/
 
 ## 🏗️ Pipeline Overview
 
-
+![Pipeline Diagram](assets/diagram.jpg)
 
 1. **Extract**
    - Read airports and routes from CSV
