@@ -23,7 +23,7 @@ def dbt_transformation():
       ]
    ).run()
 
-@flow(log_prints=True,name="Skylytics_etl_flow",retries=3,retry_delay_seconds=5)
+@flow(log_prints=True,name="Skylytics ELT workflow")
 def etl_flow():
    extract = extract_data().submit()
    load = load_into_db.submit(wait_for=[extract])
