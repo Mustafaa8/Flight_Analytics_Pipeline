@@ -1,3 +1,4 @@
 flight_env
 .env
 postgres_data
+data/weather_cache.csv
