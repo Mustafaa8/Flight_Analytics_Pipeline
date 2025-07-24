@@ -79,7 +79,6 @@ def weather_data_get():
         logging.info("Starting weather data collection...")
         df = pd.read_csv(f"{path}/airports.csv")
         df = df[(df['iata'].notna()) & (df['latitude'].notna()) & (df['longitude'].notna())]
-
         cache_file = "data/weather_cache.csv"
         if os.path.exists(cache_file):
             cached_df = pd.read_csv(cache_file)
@@ -89,22 +88,16 @@ def weather_data_get():
         else:
             airports_weather_data = []
             processed_coords = set()
-
-        # Progress bar
         bar = progressbar.ProgressBar(widgets=[
             'Weather Data Collection: ', progressbar.Percentage(),
             ' ', progressbar.Bar(marker=progressbar.RotatingMarker()),
             ' ', progressbar.Counter(), ' ', progressbar.Timer()
         ], maxval=df.shape[0]).start()
-
-        # Loop through airports
         for index, row in df.iterrows():
             lat, lon = row['latitude'], row['longitude']
             coord_key = (lat, lon)
-
             if coord_key in processed_coords:
                 continue
-
             try:
                 if index % 100 == 0 and index > 0:
                     pd.DataFrame(airports_weather_data).to_csv(cache_file, index=False)
@@ -126,10 +119,7 @@ def weather_data_get():
             except Exception as e:
                 logging.error(f"Failed for [{lat}, {lon}] - {e}")
                 continue
-
         bar.finish()
-
-        # Final save
         weather_df = pd.DataFrame(airports_weather_data)
         weather_df.to_csv("data/weather.csv", index=False)
         os.remove(cache_file)
