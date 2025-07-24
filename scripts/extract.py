@@ -132,6 +132,7 @@ def weather_data_get():
         # Final save
         weather_df = pd.DataFrame(airports_weather_data)
         weather_df.to_csv("data/weather.csv", index=False)
+        os.remove(cache_file)
         logging.info("Weather data collection completed and saved.")
 
     except Exception as e:

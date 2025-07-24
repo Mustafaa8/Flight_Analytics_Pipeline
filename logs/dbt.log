@@ -108,3 +108,49 @@ Internal Error
 [0m21:00:51.422045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70877f6d6000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70877faf51f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70877eca2180>]}
 [0m21:00:51.423197 [debug] [MainThread]: Flushing usage events
 [0m21:00:52.208671 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:26:12.609928 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e591e1bd160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e591f5f6270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e5920c691f0>]}
+
+
+============================== 18:26:12.637800 | fd26eabd-9381-4ed9-8629-0c312338abf1 ==============================
+[0m18:26:12.637800 [info ] [MainThread]: Running with dbt=1.10.3
+[0m18:26:12.638503 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/home/mostafa/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt ls', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:26:12.639003 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/mostafa/data/flight_analytics_pipeline/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:26:12.641053 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": false, "command_wall_clock_time": 0.31014898, "process_in_blocks": "18400", "process_kernel_time": 0.91492, "process_mem_max_rss": "99920", "process_out_blocks": "8", "process_user_time": 2.139984}
+[0m18:26:12.641581 [debug] [MainThread]: Command `dbt ls` failed at 18:26:12.641445 after 0.31 seconds
+[0m18:26:12.642134 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e591e277710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e591e585cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e591e1bd160>]}
+[0m18:26:12.642566 [debug] [MainThread]: Flushing usage events
+[0m18:26:13.507346 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:28:18.462462 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x790713303860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x790712e7bc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x790712ea6b70>]}
+
+
+============================== 18:28:18.465780 | c43da3f1-3fd5-4499-b27f-da117e6a30d5 ==============================
+[0m18:28:18.465780 [info ] [MainThread]: Running with dbt=1.10.3
+[0m18:28:18.466473 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/mostafa/.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt init', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:28:23.630870 [debug] [MainThread]: Starter project path: /home/mostafa/data/flight_analytics_pipeline/flight_env/lib/python3.12/site-packages/dbt/include/starter_project
+[0m18:28:23.643191 [info ] [MainThread]: 
+Your new dbt project "skylytics_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:28:23.644188 [info ] [MainThread]: Setting up your profile.
+[0m18:28:52.216748 [info ] [MainThread]: Profile skylytics_dbt written to /home/mostafa/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m18:28:52.219466 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 33.25707, "process_in_blocks": "136", "process_kernel_time": 0.282747, "process_mem_max_rss": "104152", "process_out_blocks": "80", "process_user_time": 1.700767}
+[0m18:28:52.220897 [debug] [MainThread]: Command `dbt init` succeeded at 18:28:52.220462 after 33.26 seconds
+[0m18:28:52.222399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x790712e7bc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x790713145280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7907138d3c80>]}
+[0m18:28:52.223256 [debug] [MainThread]: Flushing usage events
+[0m18:28:53.001316 [debug] [MainThread]: An error was encountered while trying to flush usage events
