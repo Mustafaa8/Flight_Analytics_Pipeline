@@ -79,14 +79,16 @@ skylytics/
 ## 📊 Dashboards Preview
 
 ### ✈️ Airport Weather Summary
-![Airport Weather](assets/dashboard_airport_weather.png)
+![Airport Weather](assets/airports_tab.PNG)
 
 ### 🌍 Top 50 Busiest Routes
-![Top Routes](assets/dashboard_top_routes.png)
+![Top Routes](assets/routes_tab.PNG)
 
 ---
 
 ## 📈 dbt Models
+
+![Lineage Graph](assets/lineage_graph.PNG)
 
 ### Staging Models
 - `stg_airports`
